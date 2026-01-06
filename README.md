@@ -34,20 +34,7 @@ This approach prioritizes:
 
 ## High-level system overview
 
-At a conceptual level, the system is composed of four parts:
-
-flowchart TD
-    A[User (Browser)]
-    B[Web Interface]
-    C[API Layer]
-    D[Fusion 360 Worker]
-    E[STL Returned to User]
-
-    A --> B
-    B -->|Choose design<br/>Enter parameters| C
-    C -->|Validate parameters<br/>Queue job<br/>Orchestrate workflow| D
-    D -->|Apply parameters<br/>Export STL| E
-
+High-level flow: A user selects a design and enters dimensions in the website UI. The API validates those inputs, creates a job, and orchestrates the work. A Fusion 360 worker applies the parameters to the source model, exports an STL, and the STL is returned to the user for download.
 
 Each step is intentionally separated to keep concerns clear and failure modes isolated.
 
