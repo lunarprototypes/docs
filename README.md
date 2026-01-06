@@ -36,26 +36,17 @@ This approach prioritizes:
 
 At a conceptual level, the system is composed of four parts:
 
-[ User (Browser) ]
-        |
-        v
-[ Web Interface ]
-- choose design
-- enter parameters
-        |
-        v
-[ API Layer ]
-- validate parameters
-- queue job
-- orchestrate workflow
-        |
-        v
-[ Fusion 360 Worker ]
-- apply parameters
-- export STL
-        |
-        v
-[ STL returned to user ]
+flowchart TD
+    A[User (Browser)]
+    B[Web Interface]
+    C[API Layer]
+    D[Fusion 360 Worker]
+    E[STL Returned to User]
+
+    A --> B
+    B -->|Choose design<br/>Enter parameters| C
+    C -->|Validate parameters<br/>Queue job<br/>Orchestrate workflow| D
+    D -->|Apply parameters<br/>Export STL| E
 
 
 Each step is intentionally separated to keep concerns clear and failure modes isolated.
