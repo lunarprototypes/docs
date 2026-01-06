@@ -1,6 +1,6 @@
 # Lunar Prototypes – Parametric Design System (Documentation)
 
-This repository documents the conceptual architecture and design philosophy behind Lunar Prototypes, a system for delivering practical, customizable 3D printable designs through a web interface.
+This repository documents the conceptual architecture and design philosophy behind Lunar Prototypes, a system built to make parametric 3D models usable by people who do not want to open CAD software for every small dimensional change.
 
 This is a documentation-only repository.
 It intentionally does not include production code, APIs, or Fusion 360 add-ins.
@@ -106,7 +106,7 @@ This documentation exists to explain how the system thinks, not to provide a too
 ## Further reading
 
 - Project site and live tools: https://lunarprototypes.com
-- Blog and development notes: https://layeredlearning.blog
+- Blog and development notes: https://blog.lunarprototypes.com
 - System architecture background: From Idea to Reality with AI (April 2024)
 
 ---
